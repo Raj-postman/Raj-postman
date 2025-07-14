@@ -1,0 +1,4349 @@
+{
+	"info": {
+		"_postman_id": "8f4ef0ff-8b6a-4015-882b-807f16a55f08",
+		"name": "Setu Collect APIs",
+		"description": "<a href=\"http://docs.setu.co/\" target=\"_blank\">Setu Collect Documentation ↗</a>\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "6774684-8f4ef0ff-8b6a-4015-882b-807f16a55f08"
+	},
+	"item": [
+		{
+			"name": "<partner-base-api-url>",
+			"item": [
+				{
+					"name": "bills",
+					"item": [
+						{
+							"name": "Respond to bill fetch",
+							"id": "004b0130-ca12-4b13-a2f4-8cbaf12e5517",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"customerIdentifiers\": [\n    {\n      \"attributeName\": \"volupta\",\n      \"attributeValue\": \"pariatur occaecat\"\n    },\n    {\n      \"attributeName\": \"sed Ut in laborum\",\n      \"attributeValue\": \"consectetur officia amet exer\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/<partner-base-api-url>/bills/fetch",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"<partner-base-api-url>",
+										"bills",
+										"fetch"
+									]
+								},
+								"description": "Used to validate the customer account and fetch the bill details."
+							},
+							"response": [
+								{
+									"id": "ba8dfcab-d202-4641-b785-1d60a59b0346",
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"customerIdentifiers\": [\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    },\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/<partner-base-api-url>/bills/fetch",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"<partner-base-api-url>",
+												"bills",
+												"fetch"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "a1bb293f-abae-4f9f-bebf-5f5487631b97"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "bf89030e-8a4e-4b7e-a823-a8faeb36fc63",
+									"name": "Malformed request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"customerIdentifiers\": [\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    },\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/<partner-base-api-url>/bills/fetch",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"<partner-base-api-url>",
+												"bills",
+												"fetch"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "c394b3ef-8b9c-4fa5-8307-26ceadf9a64d"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "646c96c7-3c67-44c5-90b6-696c65d26fd7",
+									"name": "Unauthenticated request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"customerIdentifiers\": [\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    },\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/<partner-base-api-url>/bills/fetch",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"<partner-base-api-url>",
+												"bills",
+												"fetch"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "19998110-6bb5-4624-983f-f0e3d856ad4d"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "acea1241-0625-407a-8e9b-de09e59603a5",
+									"name": "Unauthorised request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"customerIdentifiers\": [\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    },\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/<partner-base-api-url>/bills/fetch",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"<partner-base-api-url>",
+												"bills",
+												"fetch"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "7075ad0b-b0fb-4a5e-a067-e15b0dd9ba7d"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "5cd535ae-ca9b-4fd6-928d-4fc8091e2267",
+									"name": "Resource not found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"customerIdentifiers\": [\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    },\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/<partner-base-api-url>/bills/fetch",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"<partner-base-api-url>",
+												"bills",
+												"fetch"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "89e40b6b-be33-44a8-9cfa-67fa8365d18a"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "2d4b8eef-7a38-40af-9e29-c1af23918cd8",
+									"name": "HTTP method not allowed",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"customerIdentifiers\": [\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    },\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/<partner-base-api-url>/bills/fetch",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"<partner-base-api-url>",
+												"bills",
+												"fetch"
+											]
+										}
+									},
+									"status": "Method Not Allowed",
+									"code": 405,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "a06ecdab-cd3a-42d2-aeff-8097dce3cb7e"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "490e0bb8-868b-4320-8573-66f5149b33ed",
+									"name": "Too many requests",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"customerIdentifiers\": [\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    },\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/<partner-base-api-url>/bills/fetch",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"<partner-base-api-url>",
+												"bills",
+												"fetch"
+											]
+										}
+									},
+									"status": "Too Many Requests",
+									"code": 429,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "e92ff128-2355-491c-9752-78f61d86258c"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "a24ecd16-ffef-49ee-9591-66648aceb872",
+									"name": "Unable to fulfil request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"customerIdentifiers\": [\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    },\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/<partner-base-api-url>/bills/fetch",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"<partner-base-api-url>",
+												"bills",
+												"fetch"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "35155d64-fafa-47a9-b4a8-15930c8b32fe"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "18f8e275-cf19-4229-acc7-e324f752b290",
+									"name": "Server under maintenance",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"customerIdentifiers\": [\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    },\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/<partner-base-api-url>/bills/fetch",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"<partner-base-api-url>",
+												"bills",
+												"fetch"
+											]
+										}
+									},
+									"status": "Service Unavailable",
+									"code": 503,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "44263318-5692-4493-8281-d56ea2817b42"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Acknowledge payment",
+							"id": "cd45250e-10d8-438c-bc26-7b77ef394e0f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"platformBillID\": \"reprehenderit aute anim\",\n  \"billerBillID\": \"in officia laboris\",\n  \"paymentDetails\": {\n    \"amountPaid\": {\n      \"value\": 61905017.58064389,\n      \"currencyCode\": \"proid\"\n    },\n    \"billAmount\": {\n      \"value\": -68942369.48610014,\n      \"currencyCode\": \"cillum in do\"\n    },\n    \"additionalInfo\": {},\n    \"campaignID\": \"Ut non\",\n    \"instrument\": \"aliqua occaeca\",\n    \"transactionNote\": \"Payment for loan 123\",\n    \"uniquePaymentRefID\": \"fugiat dolor\"\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/<partner-base-api-url>/bills/fetchReceipt",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"<partner-base-api-url>",
+										"bills",
+										"fetchReceipt"
+									]
+								},
+								"description": "Used to validate the customer and fetch bill details."
+							},
+							"response": [
+								{
+									"id": "2d9c73fd-16d6-4ad6-8eb0-6ba5e699a0ab",
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"platformBillID\": \"<string>\",\n  \"billerBillID\": \"<string>\",\n  \"paymentDetails\": {\n    \"amountPaid\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"billAmount\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"additionalInfo\": \"<object>\",\n    \"campaignID\": \"<string>\",\n    \"instrument\": \"<string>\",\n    \"transactionNote\": \"<string>\",\n    \"uniquePaymentRefID\": \"<string>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/<partner-base-api-url>/bills/fetchReceipt",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"<partner-base-api-url>",
+												"bills",
+												"fetchReceipt"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "5fd0a25a-d68f-46ac-8954-d3a3daa37d2f"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "7ac9683d-826a-4940-8038-565489617d4c",
+									"name": "Malformed request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"platformBillID\": \"<string>\",\n  \"billerBillID\": \"<string>\",\n  \"paymentDetails\": {\n    \"amountPaid\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"billAmount\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"additionalInfo\": \"<object>\",\n    \"campaignID\": \"<string>\",\n    \"instrument\": \"<string>\",\n    \"transactionNote\": \"<string>\",\n    \"uniquePaymentRefID\": \"<string>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/<partner-base-api-url>/bills/fetchReceipt",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"<partner-base-api-url>",
+												"bills",
+												"fetchReceipt"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "bdcef682-84f9-4785-9b64-2ffa062f7869"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "82153ff4-6513-4f13-a79d-3624122eff28",
+									"name": "Unauthenticated request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"platformBillID\": \"<string>\",\n  \"billerBillID\": \"<string>\",\n  \"paymentDetails\": {\n    \"amountPaid\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"billAmount\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"additionalInfo\": \"<object>\",\n    \"campaignID\": \"<string>\",\n    \"instrument\": \"<string>\",\n    \"transactionNote\": \"<string>\",\n    \"uniquePaymentRefID\": \"<string>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/<partner-base-api-url>/bills/fetchReceipt",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"<partner-base-api-url>",
+												"bills",
+												"fetchReceipt"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "7ef980f4-240e-4477-ac6f-6e42ceb2184f"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "6d4e7c07-80fd-4f60-976b-9824a8040d68",
+									"name": "Unauthorised request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"platformBillID\": \"<string>\",\n  \"billerBillID\": \"<string>\",\n  \"paymentDetails\": {\n    \"amountPaid\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"billAmount\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"additionalInfo\": \"<object>\",\n    \"campaignID\": \"<string>\",\n    \"instrument\": \"<string>\",\n    \"transactionNote\": \"<string>\",\n    \"uniquePaymentRefID\": \"<string>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/<partner-base-api-url>/bills/fetchReceipt",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"<partner-base-api-url>",
+												"bills",
+												"fetchReceipt"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "6c409887-8c37-4cbd-9937-6fe8b8a085dc"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "a58852d0-0fac-479b-981f-c833174c33c1",
+									"name": "Resource not found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"platformBillID\": \"<string>\",\n  \"billerBillID\": \"<string>\",\n  \"paymentDetails\": {\n    \"amountPaid\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"billAmount\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"additionalInfo\": \"<object>\",\n    \"campaignID\": \"<string>\",\n    \"instrument\": \"<string>\",\n    \"transactionNote\": \"<string>\",\n    \"uniquePaymentRefID\": \"<string>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/<partner-base-api-url>/bills/fetchReceipt",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"<partner-base-api-url>",
+												"bills",
+												"fetchReceipt"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "b55b8bc1-1308-4752-8f84-070e6a0901bd"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "47ba6567-65af-467b-93ef-13f36ce84b90",
+									"name": "HTTP method not allowed",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"platformBillID\": \"<string>\",\n  \"billerBillID\": \"<string>\",\n  \"paymentDetails\": {\n    \"amountPaid\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"billAmount\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"additionalInfo\": \"<object>\",\n    \"campaignID\": \"<string>\",\n    \"instrument\": \"<string>\",\n    \"transactionNote\": \"<string>\",\n    \"uniquePaymentRefID\": \"<string>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/<partner-base-api-url>/bills/fetchReceipt",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"<partner-base-api-url>",
+												"bills",
+												"fetchReceipt"
+											]
+										}
+									},
+									"status": "Method Not Allowed",
+									"code": 405,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "85d18d26-69ae-4c96-8965-d7f13c459913"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "25281478-afc9-4462-90be-ab62d0dfb264",
+									"name": "Too many requests",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"platformBillID\": \"<string>\",\n  \"billerBillID\": \"<string>\",\n  \"paymentDetails\": {\n    \"amountPaid\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"billAmount\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"additionalInfo\": \"<object>\",\n    \"campaignID\": \"<string>\",\n    \"instrument\": \"<string>\",\n    \"transactionNote\": \"<string>\",\n    \"uniquePaymentRefID\": \"<string>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/<partner-base-api-url>/bills/fetchReceipt",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"<partner-base-api-url>",
+												"bills",
+												"fetchReceipt"
+											]
+										}
+									},
+									"status": "Too Many Requests",
+									"code": 429,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "0980e9c4-133f-4ac4-b55d-82ce4a081aec"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "2b9066b3-cade-4af5-9c73-1d9ff8eab7b0",
+									"name": "Unable to fulfil request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"platformBillID\": \"<string>\",\n  \"billerBillID\": \"<string>\",\n  \"paymentDetails\": {\n    \"amountPaid\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"billAmount\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"additionalInfo\": \"<object>\",\n    \"campaignID\": \"<string>\",\n    \"instrument\": \"<string>\",\n    \"transactionNote\": \"<string>\",\n    \"uniquePaymentRefID\": \"<string>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/<partner-base-api-url>/bills/fetchReceipt",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"<partner-base-api-url>",
+												"bills",
+												"fetchReceipt"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "b4a22ff6-f0c3-48f3-a2a5-76580eb5859e"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "1c8febe3-417f-42d0-8aea-8f515e394311",
+									"name": "Server under maintenance",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"platformBillID\": \"<string>\",\n  \"billerBillID\": \"<string>\",\n  \"paymentDetails\": {\n    \"amountPaid\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"billAmount\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"additionalInfo\": \"<object>\",\n    \"campaignID\": \"<string>\",\n    \"instrument\": \"<string>\",\n    \"transactionNote\": \"<string>\",\n    \"uniquePaymentRefID\": \"<string>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/<partner-base-api-url>/bills/fetchReceipt",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"<partner-base-api-url>",
+												"bills",
+												"fetchReceipt"
+											]
+										}
+									},
+									"status": "Service Unavailable",
+									"code": 503,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "819f5021-7386-468c-8c0e-62276cbab75c"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								}
+							]
+						}
+					],
+					"id": "18cd99b3-16c0-4351-aa70-13889a5ad115"
+				},
+				{
+					"name": "notification",
+					"id": "4358a8fc-dce8-47e7-b07c-f4d3ad0ff708",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"partnerDetails\": {\n    \"appID\": \"ex cillum\",\n    \"productInstanceID\": \"voluptate enim\"\n  },\n  \"events\": [\n    {\n      \"id\": \"dolore veniam enim est ullamco\",\n      \"type\": \"dolor sit amet\",\n      \"timeStamp\": 85720201,\n      \"data\": {}\n    },\n    {\n      \"id\": \"aute\",\n      \"type\": \"ut sint\",\n      \"timeStamp\": 30508068,\n      \"data\": {}\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/<partner-base-api-url>/notifications",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"<partner-base-api-url>",
+								"notifications"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "869db231-10e3-42bf-bd44-a8a5bd4f0a18",
+							"name": "If the payment is successful",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"partnerDetails\": {\n    \"appID\": \"<string>\",\n    \"productInstanceID\": \"<string>\"\n  },\n  \"events\": [\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"timeStamp\": \"<integer>\",\n      \"data\": \"<object>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"timeStamp\": \"<integer>\",\n      \"data\": \"<object>\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/<partner-base-api-url>/notifications",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"<partner-base-api-url>",
+										"notifications"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "d3e068a9-4095-4326-843c-a9d3514f67fa"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+						},
+						{
+							"id": "d4bf4a80-b1c4-4422-ac94-c5a404c3b564",
+							"name": "Malformed request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"partnerDetails\": {\n    \"appID\": \"<string>\",\n    \"productInstanceID\": \"<string>\"\n  },\n  \"events\": [\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"timeStamp\": \"<integer>\",\n      \"data\": \"<object>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"timeStamp\": \"<integer>\",\n      \"data\": \"<object>\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/<partner-base-api-url>/notifications",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"<partner-base-api-url>",
+										"notifications"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "02b5dafb-7f87-4a1f-ad05-348667feb258"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+						},
+						{
+							"id": "6b127f61-99f0-4989-b494-5519dcb298ba",
+							"name": "Unauthenticated request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"partnerDetails\": {\n    \"appID\": \"<string>\",\n    \"productInstanceID\": \"<string>\"\n  },\n  \"events\": [\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"timeStamp\": \"<integer>\",\n      \"data\": \"<object>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"timeStamp\": \"<integer>\",\n      \"data\": \"<object>\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/<partner-base-api-url>/notifications",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"<partner-base-api-url>",
+										"notifications"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "2ed28064-cf11-4053-bfb9-1659fcceb53e"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+						},
+						{
+							"id": "d5499e36-1145-45ca-9929-8e9cd491862f",
+							"name": "Unauthorised request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"partnerDetails\": {\n    \"appID\": \"<string>\",\n    \"productInstanceID\": \"<string>\"\n  },\n  \"events\": [\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"timeStamp\": \"<integer>\",\n      \"data\": \"<object>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"timeStamp\": \"<integer>\",\n      \"data\": \"<object>\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/<partner-base-api-url>/notifications",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"<partner-base-api-url>",
+										"notifications"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "ffc4df6f-39e1-4138-bff5-30a2f033349d"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+						},
+						{
+							"id": "eb5a733f-a0d3-4895-9c73-356b0af537a5",
+							"name": "HTTP method not allowed",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"partnerDetails\": {\n    \"appID\": \"<string>\",\n    \"productInstanceID\": \"<string>\"\n  },\n  \"events\": [\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"timeStamp\": \"<integer>\",\n      \"data\": \"<object>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"timeStamp\": \"<integer>\",\n      \"data\": \"<object>\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/<partner-base-api-url>/notifications",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"<partner-base-api-url>",
+										"notifications"
+									]
+								}
+							},
+							"status": "Method Not Allowed",
+							"code": 405,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "7f9d19b6-603c-4275-ab62-f01f0a5b8e92"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+						},
+						{
+							"id": "53f5e6cb-0016-4794-918d-1e0b597e9611",
+							"name": "Too many requests",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"partnerDetails\": {\n    \"appID\": \"<string>\",\n    \"productInstanceID\": \"<string>\"\n  },\n  \"events\": [\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"timeStamp\": \"<integer>\",\n      \"data\": \"<object>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"timeStamp\": \"<integer>\",\n      \"data\": \"<object>\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/<partner-base-api-url>/notifications",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"<partner-base-api-url>",
+										"notifications"
+									]
+								}
+							},
+							"status": "Too Many Requests",
+							"code": 429,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "c720bd1a-5207-4f81-a4d9-b749f7ca7d26"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+						},
+						{
+							"id": "cc90cf79-d778-4ed8-824c-260f6940efd0",
+							"name": "Unable to fulfil request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"partnerDetails\": {\n    \"appID\": \"<string>\",\n    \"productInstanceID\": \"<string>\"\n  },\n  \"events\": [\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"timeStamp\": \"<integer>\",\n      \"data\": \"<object>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"timeStamp\": \"<integer>\",\n      \"data\": \"<object>\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/<partner-base-api-url>/notifications",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"<partner-base-api-url>",
+										"notifications"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "0559199c-b7af-40cb-ba16-0e107962c7f4"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+						},
+						{
+							"id": "a1d6cb4f-2464-4fa9-b8ca-fdf55cc524fe",
+							"name": "Server under maintenance",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"partnerDetails\": {\n    \"appID\": \"<string>\",\n    \"productInstanceID\": \"<string>\"\n  },\n  \"events\": [\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"timeStamp\": \"<integer>\",\n      \"data\": \"<object>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"timeStamp\": \"<integer>\",\n      \"data\": \"<object>\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/<partner-base-api-url>/notifications",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"<partner-base-api-url>",
+										"notifications"
+									]
+								}
+							},
+							"status": "Service Unavailable",
+							"code": 503,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "e6718716-482c-48ef-b7b8-ad7ff5dc81a2"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+						}
+					]
+				}
+			],
+			"id": "881b5f21-0e89-4e4e-b4e0-dc5d990e5c23"
+		},
+		{
+			"name": "utilities",
+			"item": [
+				{
+					"name": "bills",
+					"item": [
+						{
+							"name": "{platform Bill Id}",
+							"item": [
+								{
+									"name": "Get bill with id",
+									"id": "018b724d-0922-48b9-a985-dd1078eb3458",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "X-Setu-Product-Instance-ID",
+												"value": "dolor ex Excepteur",
+												"description": "(Required) Identifier for product instance. Required for authorisation."
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/utilities/bills/:platformBillId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"utilities",
+												"bills",
+												":platformBillId"
+											],
+											"variable": [
+												{
+													"key": "platformBillId",
+													"value": "dolor ex Excepteur",
+													"description": "(Required) The unique identifier for a bill in Setu."
+												}
+											]
+										},
+										"description": "Returns a bill for supplied unique Setu bill ID."
+									},
+									"response": [
+										{
+											"id": "191dddf4-7626-49da-b4dd-db401aec09e5",
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) Identifier for product instance. Required for authorisation.",
+														"key": "X-Setu-Product-Instance-ID",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/utilities/bills/:platformBillId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"utilities",
+														"bills",
+														":platformBillId"
+													],
+													"variable": [
+														{
+															"key": "platformBillId",
+															"value": "dolor ex Excepteur",
+															"description": "(Required) The unique identifier for a bill in Setu."
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"uuid": "4f489bc8-9e73-4e9b-b0d7-88ed185a2a05"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+										},
+										{
+											"id": "9159801f-7315-4c09-b02f-2c3eb149b660",
+											"name": "Malformed request",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) Identifier for product instance. Required for authorisation.",
+														"key": "X-Setu-Product-Instance-ID",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/utilities/bills/:platformBillId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"utilities",
+														"bills",
+														":platformBillId"
+													],
+													"variable": [
+														{
+															"key": "platformBillId",
+															"value": "dolor ex Excepteur",
+															"description": "(Required) The unique identifier for a bill in Setu."
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"uuid": "804d0a37-e76e-47d9-925f-0dfac3fde7c6"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+										},
+										{
+											"id": "7d0f7213-1fb3-42bc-9ab7-d77788f45f06",
+											"name": "Unauthenticated request",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) Identifier for product instance. Required for authorisation.",
+														"key": "X-Setu-Product-Instance-ID",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/utilities/bills/:platformBillId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"utilities",
+														"bills",
+														":platformBillId"
+													],
+													"variable": [
+														{
+															"key": "platformBillId",
+															"value": "dolor ex Excepteur",
+															"description": "(Required) The unique identifier for a bill in Setu."
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"uuid": "e6734287-e229-4423-bad3-2f6add776c33"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+										},
+										{
+											"id": "8e8787d8-43bc-491f-9e40-da9af4417dc7",
+											"name": "Unauthorised request",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) Identifier for product instance. Required for authorisation.",
+														"key": "X-Setu-Product-Instance-ID",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/utilities/bills/:platformBillId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"utilities",
+														"bills",
+														":platformBillId"
+													],
+													"variable": [
+														{
+															"key": "platformBillId",
+															"value": "dolor ex Excepteur",
+															"description": "(Required) The unique identifier for a bill in Setu."
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"uuid": "c4d09a95-de79-4985-b6f9-f8afa25a54d4"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+										},
+										{
+											"id": "3f661b78-9f33-4a70-8da7-24549b9f94a0",
+											"name": "Resource not found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) Identifier for product instance. Required for authorisation.",
+														"key": "X-Setu-Product-Instance-ID",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/utilities/bills/:platformBillId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"utilities",
+														"bills",
+														":platformBillId"
+													],
+													"variable": [
+														{
+															"key": "platformBillId",
+															"value": "dolor ex Excepteur",
+															"description": "(Required) The unique identifier for a bill in Setu."
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"uuid": "dc9b94b9-0898-4d33-b910-fb552d4e47d1"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+										},
+										{
+											"id": "478df005-0b79-4fcf-b03b-711fa3849406",
+											"name": "HTTP method not allowed",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) Identifier for product instance. Required for authorisation.",
+														"key": "X-Setu-Product-Instance-ID",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/utilities/bills/:platformBillId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"utilities",
+														"bills",
+														":platformBillId"
+													],
+													"variable": [
+														{
+															"key": "platformBillId",
+															"value": "dolor ex Excepteur",
+															"description": "(Required) The unique identifier for a bill in Setu."
+														}
+													]
+												}
+											},
+											"status": "Method Not Allowed",
+											"code": 405,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"uuid": "b3beba45-f2a7-4033-a22e-8b2e8b516631"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+										},
+										{
+											"id": "b63b9c28-d7aa-4584-99a8-a3b1180567e0",
+											"name": "Too many requests",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) Identifier for product instance. Required for authorisation.",
+														"key": "X-Setu-Product-Instance-ID",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/utilities/bills/:platformBillId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"utilities",
+														"bills",
+														":platformBillId"
+													],
+													"variable": [
+														{
+															"key": "platformBillId",
+															"value": "dolor ex Excepteur",
+															"description": "(Required) The unique identifier for a bill in Setu."
+														}
+													]
+												}
+											},
+											"status": "Too Many Requests",
+											"code": 429,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"uuid": "3d23c948-2219-49b9-8fd0-9b5ae1d82ca2"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+										},
+										{
+											"id": "1dbb67ef-7cd7-46c6-8a86-238833fc9a3c",
+											"name": "Unable to fulfil request",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) Identifier for product instance. Required for authorisation.",
+														"key": "X-Setu-Product-Instance-ID",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/utilities/bills/:platformBillId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"utilities",
+														"bills",
+														":platformBillId"
+													],
+													"variable": [
+														{
+															"key": "platformBillId",
+															"value": "dolor ex Excepteur",
+															"description": "(Required) The unique identifier for a bill in Setu."
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"uuid": "d9ff41ce-5008-476d-a5e9-d3db80b72ada"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+										},
+										{
+											"id": "246b5eb3-b61c-451f-ab22-d7b9d5e93918",
+											"name": "Server under maintenance",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) Identifier for product instance. Required for authorisation.",
+														"key": "X-Setu-Product-Instance-ID",
+														"value": "<string>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/utilities/bills/:platformBillId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"utilities",
+														"bills",
+														":platformBillId"
+													],
+													"variable": [
+														{
+															"key": "platformBillId",
+															"value": "dolor ex Excepteur",
+															"description": "(Required) The unique identifier for a bill in Setu."
+														}
+													]
+												}
+											},
+											"status": "Service Unavailable",
+											"code": 503,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"uuid": "e96a0ca2-d6f8-4459-b53b-961280794a5a"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Request bill payment",
+									"id": "2a74b7cd-69e8-4108-a4ea-9b11a69bc662",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "X-Setu-Product-Instance-ID",
+												"value": "dolor ex Excepteur",
+												"description": "(Required) Identifier for product instance. Required for authorisation."
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"transactionID\": \"201905161605011233\",\n  \"payment\": {\n    \"paidOn\": \"1944-10-17T15:57:04.822Z\",\n    \"amount\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"instrument\": \"<string>\",\n    \"accountIdentifier\": \"sit fugiat\",\n    \"scheme\": \"<string>\",\n    \"utr\": \"consequat ipsum aliquip id\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/utilities/bills/:platformBillId/fulfilment",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"utilities",
+												"bills",
+												":platformBillId",
+												"fulfilment"
+											],
+											"variable": [
+												{
+													"key": "platformBillId",
+													"value": "dolor ex Excepteur",
+													"description": "(Required) The unique identifier for a bill in Setu."
+												}
+											]
+										},
+										"description": "Used to fulfill a bill payment."
+									},
+									"response": [
+										{
+											"id": "dd0ed166-e816-40e8-a761-e7aac20fd9c9",
+											"name": "Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "(Required) Identifier for product instance. Required for authorisation.",
+														"key": "X-Setu-Product-Instance-ID",
+														"value": "<string>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"transactionID\": \"<string>\",\n  \"payment\": {\n    \"paidOn\": \"<dateTime>\",\n    \"amount\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"instrument\": \"<string>\",\n    \"accountIdentifier\": \"<string>\",\n    \"scheme\": \"<string>\",\n    \"utr\": \"<string>\"\n  }\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/utilities/bills/:platformBillId/fulfilment",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"utilities",
+														"bills",
+														":platformBillId",
+														"fulfilment"
+													],
+													"variable": [
+														{
+															"key": "platformBillId",
+															"value": "dolor ex Excepteur",
+															"description": "(Required) The unique identifier for a bill in Setu."
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"uuid": "9d8a2d3a-6137-46a4-ac30-d19f04fdab57"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+										},
+										{
+											"id": "4747aa39-1ef3-4faf-9075-1e362aafdc5c",
+											"name": "Malformed request",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "(Required) Identifier for product instance. Required for authorisation.",
+														"key": "X-Setu-Product-Instance-ID",
+														"value": "<string>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"transactionID\": \"<string>\",\n  \"payment\": {\n    \"paidOn\": \"<dateTime>\",\n    \"amount\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"instrument\": \"<string>\",\n    \"accountIdentifier\": \"<string>\",\n    \"scheme\": \"<string>\",\n    \"utr\": \"<string>\"\n  }\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/utilities/bills/:platformBillId/fulfilment",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"utilities",
+														"bills",
+														":platformBillId",
+														"fulfilment"
+													],
+													"variable": [
+														{
+															"key": "platformBillId",
+															"value": "dolor ex Excepteur",
+															"description": "(Required) The unique identifier for a bill in Setu."
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"uuid": "d2d02822-d095-4640-9809-0c09ea52fd01"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+										},
+										{
+											"id": "6d07bc94-ae42-4775-917d-af4b742c21ca",
+											"name": "Unauthenticated request",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "(Required) Identifier for product instance. Required for authorisation.",
+														"key": "X-Setu-Product-Instance-ID",
+														"value": "<string>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"transactionID\": \"<string>\",\n  \"payment\": {\n    \"paidOn\": \"<dateTime>\",\n    \"amount\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"instrument\": \"<string>\",\n    \"accountIdentifier\": \"<string>\",\n    \"scheme\": \"<string>\",\n    \"utr\": \"<string>\"\n  }\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/utilities/bills/:platformBillId/fulfilment",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"utilities",
+														"bills",
+														":platformBillId",
+														"fulfilment"
+													],
+													"variable": [
+														{
+															"key": "platformBillId",
+															"value": "dolor ex Excepteur",
+															"description": "(Required) The unique identifier for a bill in Setu."
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"uuid": "f3b581bc-3bc3-4357-83ac-9384907eaa33"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+										},
+										{
+											"id": "01a2e021-9be0-4c8d-9e7d-64768ab43967",
+											"name": "Unauthorised request",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "(Required) Identifier for product instance. Required for authorisation.",
+														"key": "X-Setu-Product-Instance-ID",
+														"value": "<string>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"transactionID\": \"<string>\",\n  \"payment\": {\n    \"paidOn\": \"<dateTime>\",\n    \"amount\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"instrument\": \"<string>\",\n    \"accountIdentifier\": \"<string>\",\n    \"scheme\": \"<string>\",\n    \"utr\": \"<string>\"\n  }\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/utilities/bills/:platformBillId/fulfilment",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"utilities",
+														"bills",
+														":platformBillId",
+														"fulfilment"
+													],
+													"variable": [
+														{
+															"key": "platformBillId",
+															"value": "dolor ex Excepteur",
+															"description": "(Required) The unique identifier for a bill in Setu."
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"uuid": "9f975517-59f1-436c-9920-e92ba1aa2964"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+										},
+										{
+											"id": "9fc74781-9bd6-4540-be57-0184a58fe42d",
+											"name": "Resource not found",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "(Required) Identifier for product instance. Required for authorisation.",
+														"key": "X-Setu-Product-Instance-ID",
+														"value": "<string>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"transactionID\": \"<string>\",\n  \"payment\": {\n    \"paidOn\": \"<dateTime>\",\n    \"amount\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"instrument\": \"<string>\",\n    \"accountIdentifier\": \"<string>\",\n    \"scheme\": \"<string>\",\n    \"utr\": \"<string>\"\n  }\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/utilities/bills/:platformBillId/fulfilment",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"utilities",
+														"bills",
+														":platformBillId",
+														"fulfilment"
+													],
+													"variable": [
+														{
+															"key": "platformBillId",
+															"value": "dolor ex Excepteur",
+															"description": "(Required) The unique identifier for a bill in Setu."
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"uuid": "7f51f5ce-b5ec-490f-96be-70f33a45dfde"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+										},
+										{
+											"id": "e12c0805-2f64-4acd-b036-b470c4ba716e",
+											"name": "HTTP method not allowed",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "(Required) Identifier for product instance. Required for authorisation.",
+														"key": "X-Setu-Product-Instance-ID",
+														"value": "<string>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"transactionID\": \"<string>\",\n  \"payment\": {\n    \"paidOn\": \"<dateTime>\",\n    \"amount\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"instrument\": \"<string>\",\n    \"accountIdentifier\": \"<string>\",\n    \"scheme\": \"<string>\",\n    \"utr\": \"<string>\"\n  }\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/utilities/bills/:platformBillId/fulfilment",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"utilities",
+														"bills",
+														":platformBillId",
+														"fulfilment"
+													],
+													"variable": [
+														{
+															"key": "platformBillId",
+															"value": "dolor ex Excepteur",
+															"description": "(Required) The unique identifier for a bill in Setu."
+														}
+													]
+												}
+											},
+											"status": "Method Not Allowed",
+											"code": 405,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"uuid": "06ff845e-fa7b-4c43-a9e5-0521c5e55ae3"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+										},
+										{
+											"id": "42a38d4a-123a-45e6-ac5e-47dce49edc86",
+											"name": "Too many requests",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "(Required) Identifier for product instance. Required for authorisation.",
+														"key": "X-Setu-Product-Instance-ID",
+														"value": "<string>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"transactionID\": \"<string>\",\n  \"payment\": {\n    \"paidOn\": \"<dateTime>\",\n    \"amount\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"instrument\": \"<string>\",\n    \"accountIdentifier\": \"<string>\",\n    \"scheme\": \"<string>\",\n    \"utr\": \"<string>\"\n  }\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/utilities/bills/:platformBillId/fulfilment",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"utilities",
+														"bills",
+														":platformBillId",
+														"fulfilment"
+													],
+													"variable": [
+														{
+															"key": "platformBillId",
+															"value": "dolor ex Excepteur",
+															"description": "(Required) The unique identifier for a bill in Setu."
+														}
+													]
+												}
+											},
+											"status": "Too Many Requests",
+											"code": 429,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"uuid": "ef3b6ea8-fdc9-46bc-9329-7457573df03d"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+										},
+										{
+											"id": "24a4f59f-a341-44d0-bc5a-74af65a770e7",
+											"name": "Unable to fulfil request",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "(Required) Identifier for product instance. Required for authorisation.",
+														"key": "X-Setu-Product-Instance-ID",
+														"value": "<string>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"transactionID\": \"<string>\",\n  \"payment\": {\n    \"paidOn\": \"<dateTime>\",\n    \"amount\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"instrument\": \"<string>\",\n    \"accountIdentifier\": \"<string>\",\n    \"scheme\": \"<string>\",\n    \"utr\": \"<string>\"\n  }\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/utilities/bills/:platformBillId/fulfilment",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"utilities",
+														"bills",
+														":platformBillId",
+														"fulfilment"
+													],
+													"variable": [
+														{
+															"key": "platformBillId",
+															"value": "dolor ex Excepteur",
+															"description": "(Required) The unique identifier for a bill in Setu."
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"uuid": "707945e0-3e4b-46e5-8ccd-875652751448"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+										},
+										{
+											"id": "84b3a9ff-3f62-4cef-b1e4-9d853226b94b",
+											"name": "Server under maintenance",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "(Required) Identifier for product instance. Required for authorisation.",
+														"key": "X-Setu-Product-Instance-ID",
+														"value": "<string>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"transactionID\": \"<string>\",\n  \"payment\": {\n    \"paidOn\": \"<dateTime>\",\n    \"amount\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"instrument\": \"<string>\",\n    \"accountIdentifier\": \"<string>\",\n    \"scheme\": \"<string>\",\n    \"utr\": \"<string>\"\n  }\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/utilities/bills/:platformBillId/fulfilment",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"utilities",
+														"bills",
+														":platformBillId",
+														"fulfilment"
+													],
+													"variable": [
+														{
+															"key": "platformBillId",
+															"value": "dolor ex Excepteur",
+															"description": "(Required) The unique identifier for a bill in Setu."
+														}
+													]
+												}
+											},
+											"status": "Service Unavailable",
+											"code": 503,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"uuid": "28bc0178-c484-42a9-8b1d-acbd987269a6"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+										}
+									]
+								}
+							],
+							"id": "b446c396-f272-4f03-a8cb-88e89cae0037"
+						},
+						{
+							"name": "Fetch biller list",
+							"id": "47455a95-8732-449d-9b7c-f25ec56c078d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Setu-Product-Instance-ID",
+										"value": "dolor ex Excepteur",
+										"description": "(Required) Identifier for product instance. Required for authorisation."
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/utilities/bills/billers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"utilities",
+										"bills",
+										"billers"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "21e68695-0891-4bc8-abb1-d3ca18c862e4",
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) Identifier for product instance. Required for authorisation.",
+												"key": "X-Setu-Product-Instance-ID",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/utilities/bills/billers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"utilities",
+												"bills",
+												"billers"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "d6aaabf0-38f6-418c-87d6-9fce85711e02"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "82e8d4b6-8707-4e0b-9966-c030c83ade1b",
+									"name": "Malformed request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) Identifier for product instance. Required for authorisation.",
+												"key": "X-Setu-Product-Instance-ID",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/utilities/bills/billers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"utilities",
+												"bills",
+												"billers"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "d6248657-f3a0-411d-8b28-6a3677c4000d"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "10a2fa38-ab26-4a0f-ac4c-f9dfd30141d1",
+									"name": "Unauthenticated request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) Identifier for product instance. Required for authorisation.",
+												"key": "X-Setu-Product-Instance-ID",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/utilities/bills/billers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"utilities",
+												"bills",
+												"billers"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "03ceb5ff-f940-406c-a230-e5afb458f4ca"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "621c62a2-2f8f-46c3-8b7e-ff581138a6b9",
+									"name": "Unauthorised request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) Identifier for product instance. Required for authorisation.",
+												"key": "X-Setu-Product-Instance-ID",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/utilities/bills/billers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"utilities",
+												"bills",
+												"billers"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "7e71d1a2-2abd-404b-94ed-b454fa28d686"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "991cab01-4ab9-45ce-9838-7e1b23877791",
+									"name": "HTTP method not allowed",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) Identifier for product instance. Required for authorisation.",
+												"key": "X-Setu-Product-Instance-ID",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/utilities/bills/billers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"utilities",
+												"bills",
+												"billers"
+											]
+										}
+									},
+									"status": "Method Not Allowed",
+									"code": 405,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "ccd89b6f-fb0c-4ba2-b3f1-b4c3d3fe67cb"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "73404085-b455-40ec-aae0-905905aea74b",
+									"name": "Too many requests",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) Identifier for product instance. Required for authorisation.",
+												"key": "X-Setu-Product-Instance-ID",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/utilities/bills/billers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"utilities",
+												"bills",
+												"billers"
+											]
+										}
+									},
+									"status": "Too Many Requests",
+									"code": 429,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "4cb329d5-f950-4f2c-84ad-3faff3b7ad08"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "60626398-9483-47e6-a38d-cb9d998a62c7",
+									"name": "Unable to fulfil request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) Identifier for product instance. Required for authorisation.",
+												"key": "X-Setu-Product-Instance-ID",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/utilities/bills/billers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"utilities",
+												"bills",
+												"billers"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "d4b21745-4b9c-4932-b82f-4950ebeb2d75"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "da97c636-3efe-4ebd-b8eb-ca8f0548ba9d",
+									"name": "Server under maintenance",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "(Required) Identifier for product instance. Required for authorisation.",
+												"key": "X-Setu-Product-Instance-ID",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/utilities/bills/billers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"utilities",
+												"bills",
+												"billers"
+											]
+										}
+									},
+									"status": "Service Unavailable",
+									"code": 503,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "301895a8-644b-4e26-9abc-9cd7103bcf08"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Fetch outstanding bills",
+							"id": "696cef18-8606-41b1-a6d0-b9242ec446eb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Setu-Product-Instance-ID",
+										"value": "dolor ex Excepteur",
+										"description": "(Required) Identifier for product instance. Required for authorisation."
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"billerProductInstanceID\": \"minim consectetur qui velit\",\n  \"customerIdentifiers\": [\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    },\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    }\n  ],\n  \"campaignID\": \"enim Ut pariatur adipisicing\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/utilities/bills/fetch",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"utilities",
+										"bills",
+										"fetch"
+									]
+								},
+								"description": "Returns a list of bills for a given customer account."
+							},
+							"response": [
+								{
+									"id": "3a450e5d-37b1-4964-a731-62360bee9905",
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "(Required) Identifier for product instance. Required for authorisation.",
+												"key": "X-Setu-Product-Instance-ID",
+												"value": "<string>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"billerProductInstanceID\": \"<string>\",\n  \"customerIdentifiers\": [\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    },\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    }\n  ],\n  \"campaignID\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/utilities/bills/fetch",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"utilities",
+												"bills",
+												"fetch"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "c65fc115-815d-4a76-9123-e3ab5bb64a61"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "e0e879a7-ca84-479e-a264-e0d8ec12d3d9",
+									"name": "Malformed request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "(Required) Identifier for product instance. Required for authorisation.",
+												"key": "X-Setu-Product-Instance-ID",
+												"value": "<string>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"billerProductInstanceID\": \"<string>\",\n  \"customerIdentifiers\": [\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    },\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    }\n  ],\n  \"campaignID\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/utilities/bills/fetch",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"utilities",
+												"bills",
+												"fetch"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "cff4464b-fb27-4826-8071-158328298f44"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "fbcd3e64-a562-4eb9-948d-6c23f122a9a3",
+									"name": "Unauthenticated request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "(Required) Identifier for product instance. Required for authorisation.",
+												"key": "X-Setu-Product-Instance-ID",
+												"value": "<string>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"billerProductInstanceID\": \"<string>\",\n  \"customerIdentifiers\": [\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    },\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    }\n  ],\n  \"campaignID\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/utilities/bills/fetch",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"utilities",
+												"bills",
+												"fetch"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "a4379658-7a12-4b51-8d98-9f421f3c6e1f"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "0598b593-0ce0-4bef-8f5d-c9d47d293145",
+									"name": "Unauthorised request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "(Required) Identifier for product instance. Required for authorisation.",
+												"key": "X-Setu-Product-Instance-ID",
+												"value": "<string>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"billerProductInstanceID\": \"<string>\",\n  \"customerIdentifiers\": [\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    },\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    }\n  ],\n  \"campaignID\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/utilities/bills/fetch",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"utilities",
+												"bills",
+												"fetch"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "8c808566-51a5-4812-a8b1-50f2653e8081"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "95652b71-38c5-467d-8f11-bbf03b36f809",
+									"name": "Resource not found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "(Required) Identifier for product instance. Required for authorisation.",
+												"key": "X-Setu-Product-Instance-ID",
+												"value": "<string>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"billerProductInstanceID\": \"<string>\",\n  \"customerIdentifiers\": [\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    },\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    }\n  ],\n  \"campaignID\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/utilities/bills/fetch",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"utilities",
+												"bills",
+												"fetch"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "37ad3ee1-1151-4081-8592-438d896fdd21"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "1774a06c-16da-4440-8a66-0233a34adf93",
+									"name": "HTTP method not allowed",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "(Required) Identifier for product instance. Required for authorisation.",
+												"key": "X-Setu-Product-Instance-ID",
+												"value": "<string>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"billerProductInstanceID\": \"<string>\",\n  \"customerIdentifiers\": [\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    },\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    }\n  ],\n  \"campaignID\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/utilities/bills/fetch",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"utilities",
+												"bills",
+												"fetch"
+											]
+										}
+									},
+									"status": "Method Not Allowed",
+									"code": 405,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "a1f27843-b786-4654-a58e-f20829853385"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "b210d09a-4ce5-4f90-9482-539992e6228c",
+									"name": "Too many requests",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "(Required) Identifier for product instance. Required for authorisation.",
+												"key": "X-Setu-Product-Instance-ID",
+												"value": "<string>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"billerProductInstanceID\": \"<string>\",\n  \"customerIdentifiers\": [\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    },\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    }\n  ],\n  \"campaignID\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/utilities/bills/fetch",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"utilities",
+												"bills",
+												"fetch"
+											]
+										}
+									},
+									"status": "Too Many Requests",
+									"code": 429,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "ac63dbd3-da6a-4091-9766-0dd98f19f89a"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "aa5d119a-3eff-4e3e-9890-8704df906252",
+									"name": "Unable to fulfil request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "(Required) Identifier for product instance. Required for authorisation.",
+												"key": "X-Setu-Product-Instance-ID",
+												"value": "<string>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"billerProductInstanceID\": \"<string>\",\n  \"customerIdentifiers\": [\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    },\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    }\n  ],\n  \"campaignID\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/utilities/bills/fetch",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"utilities",
+												"bills",
+												"fetch"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "91cedf3a-b1f1-4055-885a-202b85a738f1"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "a9794ba2-555c-40bd-8354-04002206b8ff",
+									"name": "Server under maintenance",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "(Required) Identifier for product instance. Required for authorisation.",
+												"key": "X-Setu-Product-Instance-ID",
+												"value": "<string>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"billerProductInstanceID\": \"<string>\",\n  \"customerIdentifiers\": [\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    },\n    {\n      \"attributeName\": \"<string>\",\n      \"attributeValue\": \"<string>\"\n    }\n  ],\n  \"campaignID\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/utilities/bills/fetch",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"utilities",
+												"bills",
+												"fetch"
+											]
+										}
+									},
+									"status": "Service Unavailable",
+									"code": 503,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "b8eb999d-ee16-4691-b2b6-13b1c3b73cad"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Settle bill payments",
+							"id": "4ddfeade-d35d-4517-81f1-4b9a46367eea",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Setu-Product-Instance-ID",
+										"value": "dolor ex Excepteur",
+										"description": "(Required) Identifier for product instance. Required for authorisation."
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"settlement\": {\n    \"vanAddress\": \"consequat amet\",\n    \"ifsc\": \"incididunt adipisicing voluptate\",\n    \"utr\": \"qui pariatur magna deserunt\",\n    \"amount\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"instrument\": \"Bharat QR\",\n    \"aggregates\": {\n      \"total\": {\n        \"transactionCount\": 85130834.93686196\n      },\n      \"payment\": {\n        \"total\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"refund\": {\n        \"total\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    \"transactions\": [\n      {\n        \"utr\": \"nisi consequat mollit\",\n        \"type\": \"PAYMENT\",\n        \"amount\": {\n          \"value\": \"<int>\",\n          \"currencyCode\": \"<string>\"\n        },\n        \"platformBillID\": \"irure\",\n        \"instrument\": \"IMPS\",\n        \"date\": \"ut reprehenderit adipisicing in ipsum\",\n        \"processingFees\": {\n          \"amount\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"charges\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      },\n      {\n        \"utr\": \"aliqu\",\n        \"type\": \"PAYMENT\",\n        \"amount\": {\n          \"value\": \"<int>\",\n          \"currencyCode\": \"<string>\"\n        },\n        \"platformBillID\": \"tempor ut mollit in deserunt\",\n        \"instrument\": \"CASH\",\n        \"date\": \"est tempor aute in exercitation\",\n        \"processingFees\": {\n          \"amount\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"charges\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    ],\n    \"scheme\": \"AMEX\"\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/utilities/bills/settlement",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"utilities",
+										"bills",
+										"settlement"
+									]
+								},
+								"description": "Used by a payment processor to settle bill payments."
+							},
+							"response": [
+								{
+									"id": "15435660-4aeb-48df-9b6b-2d56336c7380",
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "(Required) Identifier for product instance. Required for authorisation.",
+												"key": "X-Setu-Product-Instance-ID",
+												"value": "<string>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"settlement\": {\n    \"vanAddress\": \"<string>\",\n    \"ifsc\": \"<string>\",\n    \"utr\": \"<string>\",\n    \"amount\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"instrument\": \"<string>\",\n    \"aggregates\": {\n      \"total\": {\n        \"transactionCount\": \"<integer>\"\n      },\n      \"payment\": {\n        \"total\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"refund\": {\n        \"total\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    \"transactions\": [\n      {\n        \"utr\": \"<string>\",\n        \"type\": \"<string>\",\n        \"amount\": {\n          \"value\": \"<int>\",\n          \"currencyCode\": \"<string>\"\n        },\n        \"platformBillID\": \"<string>\",\n        \"instrument\": \"<string>\",\n        \"date\": \"<string>\",\n        \"processingFees\": {\n          \"amount\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"charges\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      },\n      {\n        \"utr\": \"<string>\",\n        \"type\": \"<string>\",\n        \"amount\": {\n          \"value\": \"<int>\",\n          \"currencyCode\": \"<string>\"\n        },\n        \"platformBillID\": \"<string>\",\n        \"instrument\": \"<string>\",\n        \"date\": \"<string>\",\n        \"processingFees\": {\n          \"amount\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"charges\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    ],\n    \"scheme\": \"<string>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/utilities/bills/settlement",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"utilities",
+												"bills",
+												"settlement"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "890d49f1-d376-4d6b-95da-895a3384a6af"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "bf6d3206-e8de-4cbb-b825-e15c6b44f1e8",
+									"name": "Malformed request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "(Required) Identifier for product instance. Required for authorisation.",
+												"key": "X-Setu-Product-Instance-ID",
+												"value": "<string>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"settlement\": {\n    \"vanAddress\": \"<string>\",\n    \"ifsc\": \"<string>\",\n    \"utr\": \"<string>\",\n    \"amount\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"instrument\": \"<string>\",\n    \"aggregates\": {\n      \"total\": {\n        \"transactionCount\": \"<integer>\"\n      },\n      \"payment\": {\n        \"total\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"refund\": {\n        \"total\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    \"transactions\": [\n      {\n        \"utr\": \"<string>\",\n        \"type\": \"<string>\",\n        \"amount\": {\n          \"value\": \"<int>\",\n          \"currencyCode\": \"<string>\"\n        },\n        \"platformBillID\": \"<string>\",\n        \"instrument\": \"<string>\",\n        \"date\": \"<string>\",\n        \"processingFees\": {\n          \"amount\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"charges\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      },\n      {\n        \"utr\": \"<string>\",\n        \"type\": \"<string>\",\n        \"amount\": {\n          \"value\": \"<int>\",\n          \"currencyCode\": \"<string>\"\n        },\n        \"platformBillID\": \"<string>\",\n        \"instrument\": \"<string>\",\n        \"date\": \"<string>\",\n        \"processingFees\": {\n          \"amount\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"charges\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    ],\n    \"scheme\": \"<string>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/utilities/bills/settlement",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"utilities",
+												"bills",
+												"settlement"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "3ca76889-76ea-4368-a92b-4ca85e7b1aac"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "040ea4ef-61b8-4f90-ab26-5adc0d58a96f",
+									"name": "Unauthenticated request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "(Required) Identifier for product instance. Required for authorisation.",
+												"key": "X-Setu-Product-Instance-ID",
+												"value": "<string>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"settlement\": {\n    \"vanAddress\": \"<string>\",\n    \"ifsc\": \"<string>\",\n    \"utr\": \"<string>\",\n    \"amount\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"instrument\": \"<string>\",\n    \"aggregates\": {\n      \"total\": {\n        \"transactionCount\": \"<integer>\"\n      },\n      \"payment\": {\n        \"total\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"refund\": {\n        \"total\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    \"transactions\": [\n      {\n        \"utr\": \"<string>\",\n        \"type\": \"<string>\",\n        \"amount\": {\n          \"value\": \"<int>\",\n          \"currencyCode\": \"<string>\"\n        },\n        \"platformBillID\": \"<string>\",\n        \"instrument\": \"<string>\",\n        \"date\": \"<string>\",\n        \"processingFees\": {\n          \"amount\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"charges\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      },\n      {\n        \"utr\": \"<string>\",\n        \"type\": \"<string>\",\n        \"amount\": {\n          \"value\": \"<int>\",\n          \"currencyCode\": \"<string>\"\n        },\n        \"platformBillID\": \"<string>\",\n        \"instrument\": \"<string>\",\n        \"date\": \"<string>\",\n        \"processingFees\": {\n          \"amount\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"charges\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    ],\n    \"scheme\": \"<string>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/utilities/bills/settlement",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"utilities",
+												"bills",
+												"settlement"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "3132ec22-ae7a-42d6-8af3-b5d9694ea67e"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "25c72af2-cf8e-4941-8262-281cc02d75e9",
+									"name": "Unauthorised request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "(Required) Identifier for product instance. Required for authorisation.",
+												"key": "X-Setu-Product-Instance-ID",
+												"value": "<string>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"settlement\": {\n    \"vanAddress\": \"<string>\",\n    \"ifsc\": \"<string>\",\n    \"utr\": \"<string>\",\n    \"amount\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"instrument\": \"<string>\",\n    \"aggregates\": {\n      \"total\": {\n        \"transactionCount\": \"<integer>\"\n      },\n      \"payment\": {\n        \"total\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"refund\": {\n        \"total\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    \"transactions\": [\n      {\n        \"utr\": \"<string>\",\n        \"type\": \"<string>\",\n        \"amount\": {\n          \"value\": \"<int>\",\n          \"currencyCode\": \"<string>\"\n        },\n        \"platformBillID\": \"<string>\",\n        \"instrument\": \"<string>\",\n        \"date\": \"<string>\",\n        \"processingFees\": {\n          \"amount\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"charges\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      },\n      {\n        \"utr\": \"<string>\",\n        \"type\": \"<string>\",\n        \"amount\": {\n          \"value\": \"<int>\",\n          \"currencyCode\": \"<string>\"\n        },\n        \"platformBillID\": \"<string>\",\n        \"instrument\": \"<string>\",\n        \"date\": \"<string>\",\n        \"processingFees\": {\n          \"amount\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"charges\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    ],\n    \"scheme\": \"<string>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/utilities/bills/settlement",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"utilities",
+												"bills",
+												"settlement"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "c8948722-2c33-4c2b-8c42-e57829a6093b"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "2c3f0075-1459-4cd1-87e2-e41171a47755",
+									"name": "Resource not found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "(Required) Identifier for product instance. Required for authorisation.",
+												"key": "X-Setu-Product-Instance-ID",
+												"value": "<string>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"settlement\": {\n    \"vanAddress\": \"<string>\",\n    \"ifsc\": \"<string>\",\n    \"utr\": \"<string>\",\n    \"amount\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"instrument\": \"<string>\",\n    \"aggregates\": {\n      \"total\": {\n        \"transactionCount\": \"<integer>\"\n      },\n      \"payment\": {\n        \"total\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"refund\": {\n        \"total\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    \"transactions\": [\n      {\n        \"utr\": \"<string>\",\n        \"type\": \"<string>\",\n        \"amount\": {\n          \"value\": \"<int>\",\n          \"currencyCode\": \"<string>\"\n        },\n        \"platformBillID\": \"<string>\",\n        \"instrument\": \"<string>\",\n        \"date\": \"<string>\",\n        \"processingFees\": {\n          \"amount\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"charges\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      },\n      {\n        \"utr\": \"<string>\",\n        \"type\": \"<string>\",\n        \"amount\": {\n          \"value\": \"<int>\",\n          \"currencyCode\": \"<string>\"\n        },\n        \"platformBillID\": \"<string>\",\n        \"instrument\": \"<string>\",\n        \"date\": \"<string>\",\n        \"processingFees\": {\n          \"amount\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"charges\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    ],\n    \"scheme\": \"<string>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/utilities/bills/settlement",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"utilities",
+												"bills",
+												"settlement"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "c4c19c8b-cff9-4367-811b-b42004c1af93"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "39da17c9-a111-4822-8b23-3c5a4211e4a5",
+									"name": "HTTP method not allowed",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "(Required) Identifier for product instance. Required for authorisation.",
+												"key": "X-Setu-Product-Instance-ID",
+												"value": "<string>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"settlement\": {\n    \"vanAddress\": \"<string>\",\n    \"ifsc\": \"<string>\",\n    \"utr\": \"<string>\",\n    \"amount\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"instrument\": \"<string>\",\n    \"aggregates\": {\n      \"total\": {\n        \"transactionCount\": \"<integer>\"\n      },\n      \"payment\": {\n        \"total\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"refund\": {\n        \"total\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    \"transactions\": [\n      {\n        \"utr\": \"<string>\",\n        \"type\": \"<string>\",\n        \"amount\": {\n          \"value\": \"<int>\",\n          \"currencyCode\": \"<string>\"\n        },\n        \"platformBillID\": \"<string>\",\n        \"instrument\": \"<string>\",\n        \"date\": \"<string>\",\n        \"processingFees\": {\n          \"amount\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"charges\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      },\n      {\n        \"utr\": \"<string>\",\n        \"type\": \"<string>\",\n        \"amount\": {\n          \"value\": \"<int>\",\n          \"currencyCode\": \"<string>\"\n        },\n        \"platformBillID\": \"<string>\",\n        \"instrument\": \"<string>\",\n        \"date\": \"<string>\",\n        \"processingFees\": {\n          \"amount\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"charges\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    ],\n    \"scheme\": \"<string>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/utilities/bills/settlement",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"utilities",
+												"bills",
+												"settlement"
+											]
+										}
+									},
+									"status": "Method Not Allowed",
+									"code": 405,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "2b268bac-d1df-4dc9-8377-8b9aedaaaafb"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "5847658e-ef16-443f-ae5d-799f15367127",
+									"name": "Too many requests",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "(Required) Identifier for product instance. Required for authorisation.",
+												"key": "X-Setu-Product-Instance-ID",
+												"value": "<string>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"settlement\": {\n    \"vanAddress\": \"<string>\",\n    \"ifsc\": \"<string>\",\n    \"utr\": \"<string>\",\n    \"amount\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"instrument\": \"<string>\",\n    \"aggregates\": {\n      \"total\": {\n        \"transactionCount\": \"<integer>\"\n      },\n      \"payment\": {\n        \"total\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"refund\": {\n        \"total\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    \"transactions\": [\n      {\n        \"utr\": \"<string>\",\n        \"type\": \"<string>\",\n        \"amount\": {\n          \"value\": \"<int>\",\n          \"currencyCode\": \"<string>\"\n        },\n        \"platformBillID\": \"<string>\",\n        \"instrument\": \"<string>\",\n        \"date\": \"<string>\",\n        \"processingFees\": {\n          \"amount\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"charges\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      },\n      {\n        \"utr\": \"<string>\",\n        \"type\": \"<string>\",\n        \"amount\": {\n          \"value\": \"<int>\",\n          \"currencyCode\": \"<string>\"\n        },\n        \"platformBillID\": \"<string>\",\n        \"instrument\": \"<string>\",\n        \"date\": \"<string>\",\n        \"processingFees\": {\n          \"amount\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"charges\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    ],\n    \"scheme\": \"<string>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/utilities/bills/settlement",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"utilities",
+												"bills",
+												"settlement"
+											]
+										}
+									},
+									"status": "Too Many Requests",
+									"code": 429,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "42db6512-3e46-4524-bced-3436fb1781c9"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "a9c584ed-7eca-4267-a7e6-a99ad212a61f",
+									"name": "Unable to fulfil request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "(Required) Identifier for product instance. Required for authorisation.",
+												"key": "X-Setu-Product-Instance-ID",
+												"value": "<string>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"settlement\": {\n    \"vanAddress\": \"<string>\",\n    \"ifsc\": \"<string>\",\n    \"utr\": \"<string>\",\n    \"amount\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"instrument\": \"<string>\",\n    \"aggregates\": {\n      \"total\": {\n        \"transactionCount\": \"<integer>\"\n      },\n      \"payment\": {\n        \"total\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"refund\": {\n        \"total\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    \"transactions\": [\n      {\n        \"utr\": \"<string>\",\n        \"type\": \"<string>\",\n        \"amount\": {\n          \"value\": \"<int>\",\n          \"currencyCode\": \"<string>\"\n        },\n        \"platformBillID\": \"<string>\",\n        \"instrument\": \"<string>\",\n        \"date\": \"<string>\",\n        \"processingFees\": {\n          \"amount\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"charges\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      },\n      {\n        \"utr\": \"<string>\",\n        \"type\": \"<string>\",\n        \"amount\": {\n          \"value\": \"<int>\",\n          \"currencyCode\": \"<string>\"\n        },\n        \"platformBillID\": \"<string>\",\n        \"instrument\": \"<string>\",\n        \"date\": \"<string>\",\n        \"processingFees\": {\n          \"amount\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"charges\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    ],\n    \"scheme\": \"<string>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/utilities/bills/settlement",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"utilities",
+												"bills",
+												"settlement"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "1ef9fe07-d276-436f-a3ce-2d76cbb7a74b"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								},
+								{
+									"id": "6a217325-3a68-4281-bc81-d67493e58987",
+									"name": "Server under maintenance",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "(Required) Identifier for product instance. Required for authorisation.",
+												"key": "X-Setu-Product-Instance-ID",
+												"value": "<string>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"settlement\": {\n    \"vanAddress\": \"<string>\",\n    \"ifsc\": \"<string>\",\n    \"utr\": \"<string>\",\n    \"amount\": {\n      \"value\": \"<int>\",\n      \"currencyCode\": \"<string>\"\n    },\n    \"instrument\": \"<string>\",\n    \"aggregates\": {\n      \"total\": {\n        \"transactionCount\": \"<integer>\"\n      },\n      \"payment\": {\n        \"total\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"refund\": {\n        \"total\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    \"transactions\": [\n      {\n        \"utr\": \"<string>\",\n        \"type\": \"<string>\",\n        \"amount\": {\n          \"value\": \"<int>\",\n          \"currencyCode\": \"<string>\"\n        },\n        \"platformBillID\": \"<string>\",\n        \"instrument\": \"<string>\",\n        \"date\": \"<string>\",\n        \"processingFees\": {\n          \"amount\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"charges\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      },\n      {\n        \"utr\": \"<string>\",\n        \"type\": \"<string>\",\n        \"amount\": {\n          \"value\": \"<int>\",\n          \"currencyCode\": \"<string>\"\n        },\n        \"platformBillID\": \"<string>\",\n        \"instrument\": \"<string>\",\n        \"date\": \"<string>\",\n        \"processingFees\": {\n          \"amount\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"charges\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        }\n      }\n    ],\n    \"scheme\": \"<string>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/utilities/bills/settlement",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"utilities",
+												"bills",
+												"settlement"
+											]
+										}
+									},
+									"status": "Service Unavailable",
+									"code": 503,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "f9d71562-3157-4dbb-9d07-f8be5baf109f"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+								}
+							]
+						}
+					],
+					"id": "40d272ae-daa9-4e84-8d8d-7703a1520d24"
+				},
+				{
+					"name": "Get bill with biller bill ID",
+					"id": "a30e0a97-c8d6-4a6a-b30b-94073102a50b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Setu-Product-Instance-ID",
+								"value": "dolor ex Excepteur",
+								"description": "(Required) Identifier for product instance. Required for authorisation."
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/utilities/billers/bills/:billerBillId?status=CREATED",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"utilities",
+								"billers",
+								"bills",
+								":billerBillId"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "CREATED",
+									"description": "Current status of bill in Setu."
+								}
+							],
+							"variable": [
+								{
+									"key": "billerBillId",
+									"value": "dolor ex Excepteur",
+									"description": "(Required) The unique identifier for a bill on the biller's system."
+								}
+							]
+						},
+						"description": "Returns a list of bills for the supplied Biller bill ID."
+					},
+					"response": [
+						{
+							"id": "b7edbb32-9a99-4cff-888b-dc9d75a96db6",
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "(Required) Identifier for product instance. Required for authorisation.",
+										"key": "X-Setu-Product-Instance-ID",
+										"value": "<string>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/utilities/billers/bills/:billerBillId?status=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"utilities",
+										"billers",
+										"bills",
+										":billerBillId"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "<string>"
+										}
+									],
+									"variable": [
+										{
+											"key": "billerBillId",
+											"value": "dolor ex Excepteur",
+											"description": "(Required) The unique identifier for a bill on the biller's system."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "1cc0a612-ecbf-4b81-a8e7-b03af7707119"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+						},
+						{
+							"id": "0f4250ad-dc7e-44a8-95d3-883fe2c2abfe",
+							"name": "Malformed request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "(Required) Identifier for product instance. Required for authorisation.",
+										"key": "X-Setu-Product-Instance-ID",
+										"value": "<string>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/utilities/billers/bills/:billerBillId?status=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"utilities",
+										"billers",
+										"bills",
+										":billerBillId"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "<string>"
+										}
+									],
+									"variable": [
+										{
+											"key": "billerBillId",
+											"value": "dolor ex Excepteur",
+											"description": "(Required) The unique identifier for a bill on the biller's system."
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "f308b4a2-594c-49d6-9549-b62f55c1639a"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+						},
+						{
+							"id": "f7463d14-dd97-4f34-9301-28ab7dd37be4",
+							"name": "Unauthenticated request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "(Required) Identifier for product instance. Required for authorisation.",
+										"key": "X-Setu-Product-Instance-ID",
+										"value": "<string>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/utilities/billers/bills/:billerBillId?status=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"utilities",
+										"billers",
+										"bills",
+										":billerBillId"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "<string>"
+										}
+									],
+									"variable": [
+										{
+											"key": "billerBillId",
+											"value": "dolor ex Excepteur",
+											"description": "(Required) The unique identifier for a bill on the biller's system."
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "bf5e9bdf-1d9d-4e31-86d2-e52a5629b910"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+						},
+						{
+							"id": "aeda9532-cd4d-4cfb-974d-5d7b7cd453a4",
+							"name": "Unauthorised request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "(Required) Identifier for product instance. Required for authorisation.",
+										"key": "X-Setu-Product-Instance-ID",
+										"value": "<string>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/utilities/billers/bills/:billerBillId?status=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"utilities",
+										"billers",
+										"bills",
+										":billerBillId"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "<string>"
+										}
+									],
+									"variable": [
+										{
+											"key": "billerBillId",
+											"value": "dolor ex Excepteur",
+											"description": "(Required) The unique identifier for a bill on the biller's system."
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "09fa07db-48fc-4b79-99c9-fbde7aa8c482"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+						},
+						{
+							"id": "92690ae0-f163-4070-a179-bc4ffdaaceeb",
+							"name": "Resource not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "(Required) Identifier for product instance. Required for authorisation.",
+										"key": "X-Setu-Product-Instance-ID",
+										"value": "<string>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/utilities/billers/bills/:billerBillId?status=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"utilities",
+										"billers",
+										"bills",
+										":billerBillId"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "<string>"
+										}
+									],
+									"variable": [
+										{
+											"key": "billerBillId",
+											"value": "dolor ex Excepteur",
+											"description": "(Required) The unique identifier for a bill on the biller's system."
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "cf9a17fb-fc01-43ed-a6d4-0ac257e0ec0c"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+						},
+						{
+							"id": "d11ddf47-9a3e-4651-8eef-b65679f139c2",
+							"name": "HTTP method not allowed",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "(Required) Identifier for product instance. Required for authorisation.",
+										"key": "X-Setu-Product-Instance-ID",
+										"value": "<string>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/utilities/billers/bills/:billerBillId?status=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"utilities",
+										"billers",
+										"bills",
+										":billerBillId"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "<string>"
+										}
+									],
+									"variable": [
+										{
+											"key": "billerBillId",
+											"value": "dolor ex Excepteur",
+											"description": "(Required) The unique identifier for a bill on the biller's system."
+										}
+									]
+								}
+							},
+							"status": "Method Not Allowed",
+							"code": 405,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "32da148e-0ec5-4e25-95dd-360196fe0e41"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+						},
+						{
+							"id": "1f84adb2-cb54-4098-90df-b5a0293c65a0",
+							"name": "Too many requests",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "(Required) Identifier for product instance. Required for authorisation.",
+										"key": "X-Setu-Product-Instance-ID",
+										"value": "<string>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/utilities/billers/bills/:billerBillId?status=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"utilities",
+										"billers",
+										"bills",
+										":billerBillId"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "<string>"
+										}
+									],
+									"variable": [
+										{
+											"key": "billerBillId",
+											"value": "dolor ex Excepteur",
+											"description": "(Required) The unique identifier for a bill on the biller's system."
+										}
+									]
+								}
+							},
+							"status": "Too Many Requests",
+							"code": 429,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "519b368b-ffd4-4e5a-b19a-006c286708e5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+						},
+						{
+							"id": "7f4e6fbb-dfe7-48d7-8517-2623cae4a06f",
+							"name": "Unable to fulfil request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "(Required) Identifier for product instance. Required for authorisation.",
+										"key": "X-Setu-Product-Instance-ID",
+										"value": "<string>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/utilities/billers/bills/:billerBillId?status=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"utilities",
+										"billers",
+										"bills",
+										":billerBillId"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "<string>"
+										}
+									],
+									"variable": [
+										{
+											"key": "billerBillId",
+											"value": "dolor ex Excepteur",
+											"description": "(Required) The unique identifier for a bill on the biller's system."
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "bbb3f446-523c-4049-9610-616c8758b229"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+						},
+						{
+							"id": "20e4672d-01b4-49a8-a0d2-b40436a26d59",
+							"name": "Server under maintenance",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "(Required) Identifier for product instance. Required for authorisation.",
+										"key": "X-Setu-Product-Instance-ID",
+										"value": "<string>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/utilities/billers/bills/:billerBillId?status=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"utilities",
+										"billers",
+										"bills",
+										":billerBillId"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "<string>"
+										}
+									],
+									"variable": [
+										{
+											"key": "billerBillId",
+											"value": "dolor ex Excepteur",
+											"description": "(Required) The unique identifier for a bill on the biller's system."
+										}
+									]
+								}
+							},
+							"status": "Service Unavailable",
+							"code": 503,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "895056fe-aab0-4c3a-bbf6-c82b1dce5c12"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+						}
+					]
+				}
+			],
+			"id": "f732d924-6e02-4813-ab08-fad48574ad3b"
+		},
+		{
+			"name": "Retrieve reports",
+			"id": "30fb10db-951f-48d3-b928-bd3f631e0dff",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Setu-Product-Instance-ID",
+						"value": "dolor ex Excepteur",
+						"description": "(Required) Identifier for product instance. Required for authorisation."
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"productInstanceIDOfReport\": \"enim nisi\",\n  \"filters\": {}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/reports",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"reports"
+					]
+				},
+				"description": "Used to retrieve a report from the Setu system."
+			},
+			"response": [
+				{
+					"id": "a160e565-500d-4584-9729-cb926a45f88d",
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "(Required) Identifier for product instance. Required for authorisation.",
+								"key": "X-Setu-Product-Instance-ID",
+								"value": "<string>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"productInstanceIDOfReport\": \"<string>\",\n  \"filters\": \"<object>\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/reports",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"reports"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"uuid": "7c624966-ddcf-4ad9-b4d4-c58c9072c139"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+				},
+				{
+					"id": "fb47630c-901c-4b2b-b41f-2876c2bb6f70",
+					"name": "Malformed request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "(Required) Identifier for product instance. Required for authorisation.",
+								"key": "X-Setu-Product-Instance-ID",
+								"value": "<string>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"productInstanceIDOfReport\": \"<string>\",\n  \"filters\": \"<object>\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/reports",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"reports"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"uuid": "f038d09c-ae9d-482c-8672-e8d7244f23ee"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+				},
+				{
+					"id": "c9429a98-9315-4c87-badd-149c0e0ae198",
+					"name": "Unauthenticated request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "(Required) Identifier for product instance. Required for authorisation.",
+								"key": "X-Setu-Product-Instance-ID",
+								"value": "<string>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"productInstanceIDOfReport\": \"<string>\",\n  \"filters\": \"<object>\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/reports",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"reports"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"uuid": "5eb85493-8273-43ca-813c-9f8b094bd7ea"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+				},
+				{
+					"id": "6a5c9891-6cb3-4dc3-ae10-6d3784fd251f",
+					"name": "Unauthorised request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "(Required) Identifier for product instance. Required for authorisation.",
+								"key": "X-Setu-Product-Instance-ID",
+								"value": "<string>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"productInstanceIDOfReport\": \"<string>\",\n  \"filters\": \"<object>\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/reports",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"reports"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"uuid": "8f221ed8-45a1-429a-b4ea-1bdb96d298d5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+				},
+				{
+					"id": "6cd20235-12be-4ce9-94a3-d6902b4de854",
+					"name": "HTTP method not allowed",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "(Required) Identifier for product instance. Required for authorisation.",
+								"key": "X-Setu-Product-Instance-ID",
+								"value": "<string>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"productInstanceIDOfReport\": \"<string>\",\n  \"filters\": \"<object>\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/reports",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"reports"
+							]
+						}
+					},
+					"status": "Method Not Allowed",
+					"code": 405,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"uuid": "177613d3-a387-430e-a3d8-47cdf9dc7b71"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+				},
+				{
+					"id": "67bcbf18-5735-4ab9-8ba4-6ac07857d6a5",
+					"name": "Too many requests",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "(Required) Identifier for product instance. Required for authorisation.",
+								"key": "X-Setu-Product-Instance-ID",
+								"value": "<string>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"productInstanceIDOfReport\": \"<string>\",\n  \"filters\": \"<object>\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/reports",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"reports"
+							]
+						}
+					},
+					"status": "Too Many Requests",
+					"code": 429,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"uuid": "ef39ea35-25d1-4326-b7dc-052e554fa78a"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+				},
+				{
+					"id": "36085203-a5d6-4d99-9ec1-f6889da8cafe",
+					"name": "Unable to fulfil request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "(Required) Identifier for product instance. Required for authorisation.",
+								"key": "X-Setu-Product-Instance-ID",
+								"value": "<string>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"productInstanceIDOfReport\": \"<string>\",\n  \"filters\": \"<object>\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/reports",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"reports"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"uuid": "f6bb08ae-06cc-404a-bf3a-b69da189b4f8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+				},
+				{
+					"id": "30d96fb2-35c0-48ae-8a68-eeda7a526669",
+					"name": "Server under maintenance",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "(Required) Identifier for product instance. Required for authorisation.",
+								"key": "X-Setu-Product-Instance-ID",
+								"value": "<string>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"productInstanceIDOfReport\": \"<string>\",\n  \"filters\": \"<object>\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/reports",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"reports"
+							]
+						}
+					},
+					"status": "Service Unavailable",
+					"code": 503,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"uuid": "c0719a2d-70bd-4bc6-875e-2367ac3fdf92"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"status\": \"<integer>\",\n  \"success\": \"<boolean>\"\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"id": "de8b0073-cdb1-4adb-ab65-eca7f363dec0",
+			"key": "baseUrl",
+			"value": "https://uat.setu.co/api",
+			"type": "string"
+		}
+	]
+}
